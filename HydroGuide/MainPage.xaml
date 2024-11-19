@@ -1,0 +1,47 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:mct="clr-namespace:CommunityToolkit.Maui.Behaviors;assembly=CommunityToolkit.Maui"
+             x:Class="HydroGuide.MainPage"
+             Shell.NavBarIsVisible="False">
+    <Page.Behaviors>
+        <mct:StatusBarBehavior StatusBarColor="#62B4FF"  x:Name="StatusBarr"/>
+    </Page.Behaviors>
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="200"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="100"/>
+        </Grid.RowDefinitions>
+
+        <Image Source="Bubble.png" Aspect="AspectFit" HorizontalOptions="Center" AnchorY="0.55" Scale="2.5" />
+
+        <VerticalStackLayout Padding="40">
+            <Image Source="tree_planting" WidthRequest="150" Margin="20"/>
+            <Image Source="textimage" WidthRequest="225"/>
+        </VerticalStackLayout>
+
+        <HorizontalStackLayout Grid.Row="1" HorizontalOptions="Center" Spacing="10" Margin="0,175">
+            <VerticalStackLayout>
+                <ImageButton Clicked="TodolistClicked" Source="todolistframe" Aspect="AspectFit" HorizontalOptions="Center" VerticalOptions="Center" HeightRequest="55" WidthRequest="55"/>
+                <Label Text="To-Do List" FontSize="10" TextColor="#529EE3" FontAttributes="Bold" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" Padding="2"/>
+            </VerticalStackLayout>
+
+            <VerticalStackLayout >
+                <ImageButton Clicked="ManualClicked" Source="manualframe" Aspect="AspectFit" HorizontalOptions="Center" VerticalOptions="Center" HeightRequest="55" WidthRequest="55"/>
+                <Label Text="Manual" FontSize="10" TextColor="#529EE3" FontAttributes="Bold" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" Padding="2"/>
+            </VerticalStackLayout>
+
+            <VerticalStackLayout>
+                <ImageButton Clicked="ConvertClicked" Source="convertframe" Aspect="AspectFit" HorizontalOptions="Center" VerticalOptions="Center" HeightRequest="55" WidthRequest="55"/>
+                <Label Text="Convert" FontSize="10" TextColor="#529EE3" FontAttributes="Bold" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" Padding="2"/>
+            </VerticalStackLayout>
+        </HorizontalStackLayout>
+
+        <VerticalStackLayout Grid.Row="2" VerticalOptions="End" HorizontalOptions="Center" Margin="10" HeightRequest="100">
+            <Button Clicked="FollowClicked" Text="FOLLOW" BackgroundColor="#65B2FA" HeightRequest="30" WidthRequest="90" FontAttributes="Bold" FontSize="8" Margin="10"/>
+            <Label Text="Support our company by following" TextColor="#4382BC" FontSize="16" WidthRequest="275"/>
+            <Label Text="us in social media" TextColor="#4382BC" FontSize="16" WidthRequest="150"/>
+        </VerticalStackLayout>
+    </Grid>
+</ContentPage>

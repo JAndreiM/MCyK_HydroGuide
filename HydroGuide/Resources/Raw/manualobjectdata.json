@@ -1,0 +1,32 @@
+﻿[
+  {
+    "Image": "hydroponic_cover.png",
+    "Name": "NUTRIENT SOLUTION A & B",
+    "Details": "Composed of micro and macro ingredients, it provides the proper nutrients needed for the plants. Solution A is rich in calcium (Ca), and B is rich in magnesium (Mn)\nNormal mL to L ratio is 2mL per L of water",
+    "Category": "NUTRIENT"
+  },
+  {
+    "Image": "hydroponic_cover.png",
+    "Name": "IRON",
+    "Details": "Iron fixes the yellowing between veins emerging, the early plant symptoms is bronzing of the leaves with tiny brown spots. It is recommended to use iron supplement when your plant has yellowing or browning color.\nit is recommended to use 2ml per liter of water.",
+    "Category": "NUTRIENT"
+  },
+  {
+    "Image": "hydroponic_cover.png",
+    "Name": "PH UP & DOWN",
+    "Details": "They help keep the plant retain the right pH level for the plant for maximum plant absorption, pH is the scale on how acidic or basic a solution is. Measured on a scale of 1-14, the recommended pH level for each plants is 7.0, anything lower is considered acidic. If it is lower, use pH up, if it is higher use pH down. (to check the pH of your water, u can use a pH meter or pH strips)\nthere is no exact measurement of how much u need to use because u have to track it yourself.",
+    "Category": "NUTRIENT"
+  },
+  {
+    "Image": "hydroponic_cover.png",
+    "Name": "SEAWEED",
+    "Details": "A natural boosters that provides rapid growth for your plants, they contain both calcium (Ca) and magnesium (Mn) and more macro nutrients.\nIt is recommended to use 5-10ml of the said nutrient per liter of water.",
+    "Category": "NUTRIENT"
+  },
+  {
+    "Image": "hydroponic_cover.png",
+    "Name": "LETTUCE",
+    "Details": "A leafy green vegetable commonly grown in hydroponic systems due to its relatively simple care requirements and fast growth rate. It thrives in cool temperatures and can be grown in various hydroponic methods, such as nutrient film technique (NFT), deep water culture (DWC), and aeroponics.",
+    "Category": "PLANT"
+  }
+]

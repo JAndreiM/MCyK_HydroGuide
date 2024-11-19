@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:mct="clr-namespace:CommunityToolkit.Maui.Behaviors;assembly=CommunityToolkit.Maui"
+             x:Class="HydroGuide.UpdatePage"
+             Title="Update">
+
+    <Page.Behaviors>
+        <mct:StatusBarBehavior StatusBarColor="#3992E4" />
+    </Page.Behaviors>
+    
+    <VerticalStackLayout HorizontalOptions="Center" Margin="50,20">
+        <Label 
+            Text="UPDATE NOTICE!"
+            VerticalOptions="Center" 
+            HorizontalOptions="Center"
+            Margin="10"
+            FontSize="Header"
+            FontAttributes="Bold"
+            TextColor="#4382BC"/>
+        <Label 
+            Text="Would you like to update the system data to its latest version? by doing so, updates the local data used in things such as the list of items in manual."
+            VerticalOptions="Center" 
+            HorizontalOptions="Center"
+            MaximumWidthRequest="350"
+            TextColor="#4382BC"/>
+
+        <Button Clicked="OnUpdateTapped" Text="UPDATE" WidthRequest="90" HeightRequest="30" FontSize="8" Background="#529EE3" Margin="25"/>
+    </VerticalStackLayout>
+</ContentPage>

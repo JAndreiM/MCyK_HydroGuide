@@ -1,0 +1,70 @@
+<Shell
+    x:Class="HydroGuide.AppShell"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:local="clr-namespace:HydroGuide"
+    FlyoutBehavior="Flyout"
+    FlyoutHeaderBehavior="Fixed"
+    Shell.TitleColor="White"
+    Shell.BackgroundColor="#3992E4"
+    Shell.ForegroundColor="White">
+
+    <Shell.FlyoutHeader>
+        <Grid HeightRequest="55" BackgroundColor="#3992E4">
+            <Label Text="NAVIGATE" FontSize="20" FontAttributes="Bold" HorizontalOptions="Center" VerticalOptions="Center" TextColor="White"/>
+        </Grid>
+    </Shell.FlyoutHeader>
+
+    <Shell.FlyoutFooter>
+        <Grid HeightRequest="50" Margin="5">
+            <Label Text="v.0.1 - made for hydroponic farmer" 
+                   FontSize="12" 
+                   FontAttributes="Bold" 
+                   VerticalOptions="End" 
+                   TextColor="#4382BC" 
+                   Padding="10,0"/>
+        </Grid>
+    </Shell.FlyoutFooter>
+
+    <FlyoutItem Title="Home">
+        <ShellContent
+        Title="Home"
+        ContentTemplate="{DataTemplate local:MainPage}"
+        Route="MainPage"/>
+    </FlyoutItem>
+
+    <FlyoutItem Title="To-Do List">
+        <ShellContent
+        Title="ToDoListPage"
+        ContentTemplate="{DataTemplate local:ToDoListPage}"
+        Route="ToDoListPage"/>
+    </FlyoutItem>
+
+    <FlyoutItem Title="Manual">
+        <ShellContent
+        Title="ManualPage"
+        ContentTemplate="{DataTemplate local:ManualPage}"
+        Route="ManualPage"/>
+    </FlyoutItem>
+
+    <FlyoutItem Title="Convert">
+         <ShellContent
+         Title="ConvertPage"
+         ContentTemplate="{DataTemplate local:ConvertPage}"
+         Route="ConvertPage"/>
+    </FlyoutItem>
+
+    <FlyoutItem Title="Update">
+        <ShellContent
+         Title="UpdatePage"
+         ContentTemplate="{DataTemplate local:UpdatePage}"
+         Route="UpdatePage"/>
+    </FlyoutItem>
+
+    <FlyoutItem Title="About">
+        <ShellContent
+    Title="About"
+    ContentTemplate="{DataTemplate local:AboutPage}"
+    Route="AboutPage"/>
+    </FlyoutItem>
+</Shell>

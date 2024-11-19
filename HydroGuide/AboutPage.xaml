@@ -1,0 +1,250 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:mct="clr-namespace:CommunityToolkit.Maui.Behaviors;assembly=CommunityToolkit.Maui"
+             x:Class="HydroGuide.AboutPage"
+             Title="About">
+    <Page.Behaviors>
+        <mct:StatusBarBehavior StatusBarColor="#3992E4" />
+    </Page.Behaviors>
+    
+    <ScrollView>
+        <VerticalStackLayout Margin="20,10">
+            <Image Source="hydroponic_cover" Margin="0,10"/>
+            <Label FontAttributes="Bold" FontSize="16" Text="HYDROPONIC FARMING" TextColor="{StaticResource AboutPagePrimary}"/>
+            <Label TextColor="{StaticResource AboutPagePrimary}" FontSize="12" VerticalOptions="StartAndExpand" HorizontalOptions="StartAndExpand" Text="     Hydroponic farming is a method of growing plants without soil, using nutrient-rich water to supply plants with the nutrients they need. This farming method is increasingly popular, especially among farmers with limited land, because it allows for efficient crop growth in small spaces and often requires less water than traditional soil-based farming. Here’s a guide to help farmers with limited knowledge understand hydroponic farming and improve their practices:"/>
+
+            <Label FontAttributes="Bold" FontSize="14" Text="1. Basics of Hydroponic Farming" Margin="0,10" TextColor="{StaticResource AboutPagePrimary}"/>
+            <Label Margin="25,0" FontSize="12" VerticalOptions="StartAndExpand" HorizontalOptions="StartAndExpand"  WidthRequest="325">
+                <Label.FormattedText>
+                    <FormattedString>
+                        <Span TextColor="{StaticResource AboutPagePrimary}" Text="• Definition:" FontAttributes="Bold"/>
+                        <Span TextColor="{StaticResource AboutPagePrimary}" Text=" Hydroponics is a soil-less growing method where plants grow with their roots directly exposed to nutrient-filled water."/>
+                    </FormattedString>
+                </Label.FormattedText>
+            </Label>
+            <Label Margin="25,0" FontSize="12" VerticalOptions="StartAndExpand" HorizontalOptions="StartAndExpand" WidthRequest="325">
+                <Label.FormattedText>
+                    <FormattedString>
+                        <Span TextColor="{StaticResource AboutPagePrimary}" Text="• How it Works:" FontAttributes="Bold"/>
+                        <Span TextColor="{StaticResource AboutPagePrimary}" Text=" Plants receive a balanced mix of water, nutrients, and sometimes oxygen, enabling faster growth. Nutrients dissolved in water are directly absorbed by the roots."/>
+                    </FormattedString>
+                </Label.FormattedText>
+            </Label>
+            <Label Margin="25,0" FontSize="12" VerticalOptions="StartAndExpand" HorizontalOptions="StartAndExpand" WidthRequest="325">
+                <Label.FormattedText>
+                    <FormattedString>
+                        <Span TextColor="{StaticResource AboutPagePrimary}" Text="• Types of Systems:" FontAttributes="Bold"/>
+                        <Span TextColor="{StaticResource AboutPagePrimary}" Text=" There are various hydroponic systems, including Nutrient Film Technique (NFT), Deep Water Culture (DWC), Ebb and Flow, Aeroponics, and Drip Systems. Each has unique benefits depending on the farmer's resources and crop types."/>
+                    </FormattedString>
+                </Label.FormattedText>
+            </Label>
+
+            <Label FontAttributes="Bold" FontSize="14" Text="2. Benefits of Hydroponics" Margin="0,10" TextColor="{StaticResource AboutPagePrimary}"/> 
+            <Label Margin="25,0" FontSize="12" VerticalOptions="StartAndExpand" HorizontalOptions="StartAndExpand" WidthRequest="325">
+                <Label.FormattedText>
+                    <FormattedString>
+                        <Span TextColor="{StaticResource AboutPagePrimary}" Text="• Higher Yields:" FontAttributes="Bold"/>
+                        <Span TextColor="{StaticResource AboutPagePrimary}" Text=" Since nutrients are directly provided, plants grow faster and yields can be significantly higher."/>
+                    </FormattedString>
+                </Label.FormattedText>
+            </Label>
+            <Label Margin="25,0" FontSize="12" VerticalOptions="StartAndExpand" HorizontalOptions="StartAndExpand" WidthRequest="325">
+                <Label.FormattedText>
+                    <FormattedString>
+                        <Span TextColor="{StaticResource AboutPagePrimary}" Text="• Space Efficiency:" FontAttributes="Bold"/>
+                        <Span TextColor="{StaticResource AboutPagePrimary}" Text=" Hydroponics requires less space than traditional farming, making it ideal for urban or limited land environments."/>
+                    </FormattedString>
+                </Label.FormattedText>
+            </Label>
+            <Label Margin="25,0" FontSize="12" VerticalOptions="StartAndExpand" HorizontalOptions="StartAndExpand" WidthRequest="325">
+                <Label.FormattedText>
+                    <FormattedString>
+                        <Span TextColor="{StaticResource AboutPagePrimary}" Text="• Water Conservation:" FontAttributes="Bold"/>
+                        <Span TextColor="{StaticResource AboutPagePrimary}" Text=" Hydroponic systems recirculate water, using up to 90% less water than soil-based agriculture."/>
+                    </FormattedString>
+                </Label.FormattedText>
+            </Label>
+            <Label Margin="25,0" FontSize="12" VerticalOptions="StartAndExpand" HorizontalOptions="StartAndExpand" WidthRequest="325">
+                <Label.FormattedText>
+                    <FormattedString>
+                        <Span TextColor="{StaticResource AboutPagePrimary}" Text="• Reduced Soil-Related Issues:" FontAttributes="Bold"/>
+                        <Span TextColor="{StaticResource AboutPagePrimary}" Text="  Since no soil is used, problems like soil-borne diseases, weeds, and pests are minimized."/>
+                    </FormattedString>
+                </Label.FormattedText>
+            </Label>
+
+            <Label FontAttributes="Bold" FontSize="14" Text="3. Hydroponic Nutrients and Solutions" Margin="0,10" TextColor="{StaticResource AboutPagePrimary}"/>
+            <Label Margin="25,0" FontSize="12" VerticalOptions="StartAndExpand" HorizontalOptions="StartAndExpand" WidthRequest="325">
+                <Label.FormattedText>
+                    <FormattedString>
+                        <Span TextColor="{StaticResource AboutPagePrimary}" Text="• Essential Nutrients:" FontAttributes="Bold"/>
+                        <Span TextColor="{StaticResource AboutPagePrimary}" Text=" Plants need macronutrients (nitrogen, phosphorus, potassium) and micronutrients (calcium, magnesium, sulfur, etc.). Pre-made hydroponic nutrient solutions are available, or farmers can create their own by following specific nutrient ratios."/>
+                    </FormattedString>
+                </Label.FormattedText>
+            </Label>
+            <Label Margin="25,0" FontSize="12" VerticalOptions="StartAndExpand" HorizontalOptions="StartAndExpand" WidthRequest="325">
+                <Label.FormattedText>
+                    <FormattedString>
+                        <Span TextColor="{StaticResource AboutPagePrimary}" Text="• pH Levels:" FontAttributes="Bold"/>
+                        <Span TextColor="{StaticResource AboutPagePrimary}" Text=" Ideal pH levels for most hydroponic systems are between 5.5 and 6.5. Regularly check and adjust the pH of your nutrient solution as needed for optimal nutrient absorption."/>
+                    </FormattedString>
+                </Label.FormattedText>
+            </Label>
+
+            <Label FontAttributes="Bold" FontSize="14" Text="4. Lighting and Temperature" Margin="0,10" TextColor="{StaticResource AboutPagePrimary}"/>
+            <Label Margin="25,0" FontSize="12" VerticalOptions="StartAndExpand" HorizontalOptions="StartAndExpand" WidthRequest="325">
+                <Label.FormattedText>
+                    <FormattedString>
+                        <Span TextColor="{StaticResource AboutPagePrimary}" Text="• Lighting:" FontAttributes="Bold"/>
+                        <Span TextColor="{StaticResource AboutPagePrimary}" Text=" For indoor hydroponics, artificial lights (LEDs, fluorescents, etc.) provide the light plants need for photosynthesis. Choose lights that emit wavelengths in the red and blue spectrum for optimal growth."/>
+                    </FormattedString>
+                </Label.FormattedText>
+            </Label>
+            <Label Margin="25,0" FontSize="12" VerticalOptions="StartAndExpand" HorizontalOptions="StartAndExpand" WidthRequest="325">
+                <Label.FormattedText>
+                    <FormattedString>
+                        <Span TextColor="{StaticResource AboutPagePrimary}" Text="• Temperature:" FontAttributes="Bold"/>
+                        <Span TextColor="{StaticResource AboutPagePrimary}" Text=" Most plants thrive in temperatures between 65–75°F (18–24°C). Maintaining stable temperatures and good air circulation reduces stress on plants."/>
+                    </FormattedString>
+                </Label.FormattedText>
+            </Label>
+
+            <Label FontAttributes="Bold" FontSize="14" Text="5. Common Hydroponic Systems Explained" Margin="0,10" TextColor="{StaticResource AboutPagePrimary}"/>
+            <Label Margin="25,0" FontSize="12" VerticalOptions="StartAndExpand" HorizontalOptions="StartAndExpand" WidthRequest="325">
+                <Label.FormattedText>
+                    <FormattedString>
+                        <Span TextColor="{StaticResource AboutPagePrimary}" Text="• Nutrient Film Technique (NFT):" FontAttributes="Bold"/>
+                        <Span TextColor="{StaticResource AboutPagePrimary}" Text=" ForA thin film of nutrient solution flows over the roots, which hang down in channels. This system works well for leafy greens."/>
+                    </FormattedString>
+                </Label.FormattedText>
+            </Label>
+            <Label Margin="25,0" FontSize="12" VerticalOptions="StartAndExpand" HorizontalOptions="StartAndExpand" WidthRequest="325" TextColor="{StaticResource AboutPagePrimary}">
+                <Label.FormattedText>
+                    <FormattedString>
+                        <Span TextColor="{StaticResource AboutPagePrimary}" Text="• Deep Water Culture (DWC):" FontAttributes="Bold"/>
+                        <Span TextColor="{StaticResource AboutPagePrimary}" Text="  Plants float on a nutrient solution with roots submerged. This is one of the simplest systems, often used for small to medium plants."/>
+                    </FormattedString>
+                </Label.FormattedText>
+            </Label>
+            <Label Margin="25,0" FontSize="12" VerticalOptions="StartAndExpand" HorizontalOptions="StartAndExpand" WidthRequest="325">
+                <Label.FormattedText>
+                    <FormattedString>
+                        <Span TextColor="{StaticResource AboutPagePrimary}" Text="• Drip System:" FontAttributes="Bold"/>
+                        <Span TextColor="{StaticResource AboutPagePrimary}" Text="  Nutrient solution drips onto the plant roots, allowing for precision control of nutrients and water."/>
+                    </FormattedString>
+                </Label.FormattedText>
+            </Label>
+            <Label Margin="25,0" FontSize="12" VerticalOptions="StartAndExpand" HorizontalOptions="StartAndExpand" WidthRequest="325">
+                <Label.FormattedText>
+                    <FormattedString>
+                        <Span TextColor="{StaticResource AboutPagePrimary}" Text="• Aeroponics:" FontAttributes="Bold"/>
+                        <Span TextColor="{StaticResource AboutPagePrimary}" Text="  Roots are misted with nutrient solution in a closed environment, allowing for high oxygenation. This method is effective but requires more equipment and monitoring."/>
+                    </FormattedString>
+                </Label.FormattedText>
+            </Label>
+
+            <Label FontAttributes="Bold" FontSize="14" Text="6. Setting Up a Basic Hydroponic System" Margin="0,10" TextColor="{StaticResource AboutPagePrimary}"/>
+            <Label Margin="25,0" FontSize="12" VerticalOptions="StartAndExpand" HorizontalOptions="StartAndExpand" WidthRequest="325">
+                <Label.FormattedText>
+                    <FormattedString>
+                        <Span TextColor="{StaticResource AboutPagePrimary}" Text="• Select the Right Crops:" FontAttributes="Bold"/>
+                        <Span TextColor="{StaticResource AboutPagePrimary}" Text=" Start with easy-to-grow crops like lettuce, spinach, herbs, or tomatoes to get familiar with the process."/>
+                    </FormattedString>
+                </Label.FormattedText>
+            </Label>
+            <Label Margin="25,0" FontSize="12" VerticalOptions="StartAndExpand" HorizontalOptions="StartAndExpand" WidthRequest="325">
+                <Label.FormattedText>
+                    <FormattedString>
+                        <Span TextColor="{StaticResource AboutPagePrimary}" Text="• Choose a System:" FontAttributes="Bold"/>
+                        <Span TextColor="{StaticResource AboutPagePrimary}" Text="  For beginners, a simple DWC or drip system is often the easiest to set up and maintain."/>
+                    </FormattedString>
+                </Label.FormattedText>
+            </Label>
+            <Label Margin="25,0" FontSize="12" VerticalOptions="StartAndExpand" HorizontalOptions="StartAndExpand" WidthRequest="325">
+                <Label.FormattedText>
+                    <FormattedString>
+                        <Span TextColor="{StaticResource AboutPagePrimary}" Text="• Prepare the Nutrient Solution:" FontAttributes="Bold"/>
+                        <Span TextColor="{StaticResource AboutPagePrimary}" Text="  Use pre-made nutrient solutions or follow a recipe for a balanced solution. Measure the pH and adjust as necessary."/>
+                    </FormattedString>
+                </Label.FormattedText>
+            </Label>
+            <Label Margin="25,0" FontSize="12" VerticalOptions="StartAndExpand" HorizontalOptions="StartAndExpand" WidthRequest="325">
+                <Label.FormattedText>
+                    <FormattedString>
+                        <Span TextColor="{StaticResource AboutPagePrimary}" Text="• Monitor Regularly:" FontAttributes="Bold"/>
+                        <Span TextColor="{StaticResource AboutPagePrimary}" Text="  Check water levels, nutrient concentration, and plant health every few days. This helps catch and correct issues early."/>
+                    </FormattedString>
+                </Label.FormattedText>
+            </Label>
+
+            <Label FontAttributes="Bold" FontSize="14" Text="7. Tips for Success" Margin="0,10" TextColor="{StaticResource AboutPagePrimary}"/>
+            <Label Margin="25,0" FontSize="12" VerticalOptions="StartAndExpand" HorizontalOptions="StartAndExpand" WidthRequest="325">
+                <Label.FormattedText>
+                    <FormattedString>
+                        <Span TextColor="{StaticResource AboutPagePrimary}" Text="• Start Small:" FontAttributes="Bold"/>
+                        <Span TextColor="{StaticResource AboutPagePrimary}" Text=" StartFor beginners, starting with a small setup helps manage resources and learn without overwhelming costs."/>
+                    </FormattedString>
+                </Label.FormattedText>
+            </Label>
+            <Label Margin="25,0" FontSize="12" VerticalOptions="StartAndExpand" HorizontalOptions="StartAndExpand" WidthRequest="325">
+                <Label.FormattedText>
+                    <FormattedString>
+                        <Span TextColor="{StaticResource AboutPagePrimary}" Text="• Invest in Quality Equipment:" FontAttributes="Bold"/>
+                        <Span TextColor="{StaticResource AboutPagePrimary}" Text="  ForHigh-quality grow lights, pH meters, and pumps can help ensure stable conditions and reduce troubleshooting."/>
+                    </FormattedString>
+                </Label.FormattedText>
+            </Label>
+            <Label Margin="25,0" FontSize="12" VerticalOptions="StartAndExpand" HorizontalOptions="StartAndExpand" WidthRequest="325">
+                <Label.FormattedText>
+                    <FormattedString>
+                        <Span TextColor="{StaticResource AboutPagePrimary}" Text="• Track Growth and Conditions:" FontAttributes="Bold"/>
+                        <Span TextColor="{StaticResource AboutPagePrimary}" Text="  Keeping a record of pH levels, light duration, temperature, and plant health can help improve results over time."/>
+                    </FormattedString>
+                </Label.FormattedText>
+            </Label>
+            <Label Margin="25,0" FontSize="12" VerticalOptions="StartAndExpand" HorizontalOptions="StartAndExpand" WidthRequest="325">
+                <Label.FormattedText>
+                    <FormattedString>
+                        <Span TextColor="{StaticResource AboutPagePrimary}" Text="• Educate and Experiment:" FontAttributes="Bold"/>
+                        <Span TextColor="{StaticResource AboutPagePrimary}" Text="  Learn from others, attend workshops, or join online communities for practical advice on hydroponics."/>
+                    </FormattedString>
+                </Label.FormattedText>
+            </Label>
+
+            <Label FontAttributes="Bold" FontSize="14" Text="8. Challenges to Consider" Margin="0,10" TextColor="{StaticResource AboutPagePrimary}"/>
+            <Label Margin="25,0" FontSize="12" VerticalOptions="StartAndExpand" HorizontalOptions="StartAndExpand" WidthRequest="325">
+                <Label.FormattedText>
+                    <FormattedString>
+                        <Span TextColor="{StaticResource AboutPagePrimary}" Text="• Initial Setup Costs:" FontAttributes="Bold"/>
+                        <Span TextColor="{StaticResource AboutPagePrimary}" Text=" StartForHydroponic systems can have higher setup costs compared to traditional farming. However, savings in water and faster crop cycles can offset these costs."/>
+                    </FormattedString>
+                </Label.FormattedText>
+            </Label>
+            <Label Margin="25,0" FontSize="12" VerticalOptions="StartAndExpand" HorizontalOptions="StartAndExpand" WidthRequest="325">
+                <Label.FormattedText>
+                    <FormattedString>
+                        <Span TextColor="{StaticResource AboutPagePrimary}" Text="• Maintenance:" FontAttributes="Bold"/>
+                        <Span TextColor="{StaticResource AboutPagePrimary}" Text=" Monitoring and adjusting water, nutrient levels, and pH requires attention. Automated systems can help reduce workload."/>
+                    </FormattedString>
+                </Label.FormattedText>
+            </Label>
+            <Label Margin="25,0" FontSize="12" VerticalOptions="StartAndExpand" HorizontalOptions="StartAndExpand" WidthRequest="325">
+                <Label.FormattedText>
+                    <FormattedString>
+                        <Span TextColor="{StaticResource AboutPagePrimary}" Text="• Power Needs:" FontAttributes="Bold"/>
+                        <Span TextColor="{StaticResource AboutPagePrimary}" Text="  If using grow lights or pumps, hydroponics may require a reliable power source, especially for indoor setups."/>
+                    </FormattedString>
+                </Label.FormattedText>
+            </Label>
+
+            <Label Text=" " Margin="0,3"/>
+
+            <Label TextColor="{StaticResource AboutPagePrimary}" FontSize="12" VerticalOptions="StartAndExpand" HorizontalOptions="StartAndExpand" Text="     Hydroponic farming can be a rewarding and efficient way to grow crops, especially for those with limited space or water. As knowledge and experience increase, farmers can scale up their systems and experiment with new crops, taking full advantage of the hydroponic method’s flexibility and efficiency."/>
+            <Label TextColor="{StaticResource AboutPagePrimary}" FontSize="8" VerticalOptions="StartAndExpand" HorizontalOptions="StartAndExpand" Text="~~Provided infos' are attained with the help of ChatGPT"/>
+
+            <Label Text=" " Margin="0,1"/>
+            
+        </VerticalStackLayout>
+    </ScrollView>
+</ContentPage> 
