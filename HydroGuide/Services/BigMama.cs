@@ -1,5 +1,6 @@
 ﻿using HydroGuide.Model;
 using System.Diagnostics;
+using System.Net;
 using System.Net.Http.Json;
 using System.Text.Json;
 
@@ -26,12 +27,25 @@ public class BigMama
         //{
         //    ManualList = await response.Content.ReadFromJsonAsync<List<ManualObject>>();
         //}
-       var response = await httpClient.GetAsync("https://pastebin.com/raw/qQxaqtps");
+
+
+        //var REDresponse = await httpClient.GetAsync("https://pastebin.com/raw/T09aDuNm");
+        // if (REDresponse.IsSuccessStatusCode)
+        // {
+        //     var response = await httpClient.GetAsync(REDresponse.Content.ToString());
+        //     if (response.IsSuccessStatusCode)
+        //     {
+        //         ManualList = await response.Content.ReadFromJsonAsync<List<ManualObject>>();
+        //         return ManualList;
+        //     }
+        // }
+        var response = await httpClient.GetAsync("https://pastebin.com/raw/qQxaqtps");
         if (response.IsSuccessStatusCode)
         {
             ManualList = await response.Content.ReadFromJsonAsync<List<ManualObject>>();
             return ManualList;
         }
+
 
         using var stream = await FileSystem.OpenAppPackageFileAsync("manualobjectdata.json");
         using var reader = new StreamReader(stream);
