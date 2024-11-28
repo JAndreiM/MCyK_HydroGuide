@@ -6,7 +6,7 @@
                      xmlns:model="clr-namespace:HydroGuide.Model"
                      xmlns:viewmodel="clr-namespace:HydroGuide.ViewModel"
                      x:DataType="viewmodel:ManualViewModel"
-                     Title="Manual">
+                     Title="MANUAL">
 
     <Page.Behaviors>
         <mct:StatusBarBehavior StatusBarColor="#3992E4" />

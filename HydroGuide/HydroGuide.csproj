@@ -129,6 +129,7 @@
 	  <None Remove="Resources\Images\convertframe.png" />
 	  <None Remove="Resources\Images\hydroponic_cover.png" />
 	  <None Remove="Resources\Images\manualframe.png" />
+	  <None Remove="Resources\Images\positive.svg" />
 	  <None Remove="Resources\Images\textimage.png" />
 	  <None Remove="Resources\Images\todolistframe.png" />
 	  <None Remove="Resources\Images\tree_planting.png" />
@@ -149,6 +150,8 @@
 		<PackageReference Include="Microsoft.Maui.Controls.Compatibility" Version="8.0.92" />
 		<PackageReference Include="Microsoft.Extensions.Logging.Debug" Version="8.0.1" />
 		<PackageReference Include="Microsoft.Maui.Essentials" Version="8.0.92" />
+		<PackageReference Include="MvvmLightLibs" Version="5.4.1.1" />
+		<PackageReference Include="sqlite-net-pcl" Version="1.9.172" />
 	</ItemGroup>
 
 	<ItemGroup>
@@ -156,6 +159,12 @@
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
 	  <MauiXaml Update="ManualPage.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	  <MauiXaml Update="ToDoListDetail.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	  <MauiXaml Update="ToDoListNew.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
 	  <MauiXaml Update="ToDoListPage.xaml">

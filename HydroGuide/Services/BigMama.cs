@@ -9,9 +9,11 @@ namespace HydroGuide.Services;
 public class BigMama
 {
     readonly HttpClient httpClient;
-    public BigMama()
+    private readonly TDLDatabaseService _TDLdatabaseService;
+    public BigMama(TDLDatabaseService TDLDatabaseService)
     {
         httpClient = new HttpClient();
+        _TDLdatabaseService = TDLDatabaseService;
     }
 
     List<ManualObject>? ManualList;
@@ -52,8 +54,18 @@ public class BigMama
         var contents = await reader.ReadToEndAsync();
         ManualList = JsonSerializer.Deserialize<List<ManualObject>>(json: contents);
         if (ManualList != null)
-             return ManualList;
+            return ManualList;
 
         return ManualList;
+    }
+
+    List<TDLObject>? ToDoList;
+    public async Task<List<TDLObject>?> GetToDoList()
+    {
+        ToDoList = [];
+
+        ToDoList = await _TDLdatabaseService.GetAllRecordsAsync();
+
+        return ToDoList;
     }
 }

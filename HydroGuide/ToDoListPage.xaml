@@ -3,10 +3,72 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:mct="clr-namespace:CommunityToolkit.Maui.Behaviors;assembly=CommunityToolkit.Maui"
              x:Class="HydroGuide.ToDoListPage"
-             Title="To-Do List">
+             xmlns:model="clr-namespace:HydroGuide.Model"
+             xmlns:viewmodel="clr-namespace:HydroGuide.ViewModel"
+             x:DataType="viewmodel:ToDoListViewModel"
+             Title="TO-DO LIST">
 
     <Page.Behaviors>
         <mct:StatusBarBehavior StatusBarColor="#3992E4" />
     </Page.Behaviors>
-    
+
+    <Grid>
+        <ImageButton ZIndex="2" Command="{Binding TapForNewCommand}" Source="positive.svg" Background="{StaticResource Primary}" HeightRequest="50" WidthRequest="50" CornerRadius="12" HorizontalOptions="End" VerticalOptions="End" Margin="40"/>
+
+        <CollectionView ItemsSource="{Binding ToDoList}" x:Name="ppList" SelectionMode="None" Margin="25,15">
+            <CollectionView.ItemTemplate>
+                <DataTemplate x:DataType="model:TDLObject">
+                    <SwipeView>
+                        <SwipeView.RightItems>
+                            <SwipeItem Text="DELETE" BackgroundColor="Red" Command="{Binding Source={RelativeSource AncestorType={x:Type viewmodel:ToDoListViewModel}}, Path=DeleteElementCommand}" CommandParameter="{Binding Id}"/>
+                        </SwipeView.RightItems>
+                    
+                        <Grid Padding="0,5">
+                            <Frame
+                                 BackgroundColor="{StaticResource Primary}"
+                                 BorderColor="{StaticResource Primary}">    
+                                <Frame.GestureRecognizers>
+                                    <TapGestureRecognizer
+                                                          Command = "{Binding Source={RelativeSource AncestorType={x:Type viewmodel:ToDoListViewModel}}, Path=TapCommand}"
+                                                          CommandParameter="{Binding .}"/>  
+                                </Frame.GestureRecognizers>
+                                <Label Text="{Binding Title}" 
+                                        FontSize="14" 
+                                        FontAttributes="Bold" 
+                                        HorizontalTextAlignment="Center" 
+                                        VerticalTextAlignment="Center"
+                                        TextColor="{StaticResource White}"/>
+
+
+                            </Frame>
+                            <Label  FontSize="9"
+                                    FontAttributes="Bold"
+                                    HorizontalTextAlignment="Start"
+                                    VerticalTextAlignment="Start"
+                                    Margin="10,5"
+                                    TextTransform="Uppercase"
+                                    TextColor="{StaticResource White}">
+                                <Label.FormattedText>
+                                    <FormattedString>
+                                        <Span Text="{Binding Date}" TextColor="{StaticResource White}"/>
+                                        <Span Text=" - " TextColor="{StaticResource White}"/>
+                                        <Span Text="{Binding Time}" TextColor="{StaticResource White}"/>
+                                    </FormattedString>
+                                </Label.FormattedText>
+                            </Label>
+
+                            <CheckBox Background="Transparent" HorizontalOptions="End" Color="White" Margin="10,0" IsChecked="{Binding Accomplished}"/>
+                        </Grid>
+                    </SwipeView>
+                </DataTemplate>
+            </CollectionView.ItemTemplate>
+        </CollectionView>
+       
+        <ActivityIndicator IsVisible="{Binding IsBusy}"
+                        IsRunning="{Binding IsBusy}"
+                        HorizontalOptions="Fill"
+                        VerticalOptions="Center"
+                        Color="{StaticResource PrimaryDark}"/>
+    </Grid>
+
 </ContentPage>

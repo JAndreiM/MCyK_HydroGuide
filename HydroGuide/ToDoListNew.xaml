@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="HydroGuide.ToDoListNew"
+             xmlns:model="clr-namespace:HydroGuide.Model"
+             xmlns:viewmodel="clr-namespace:HydroGuide.ViewModel"
+             x:DataType="viewmodel:ToDoListNewViewModel"
+             Title="CREATE NEW">
+    <ScrollView Margin="15">
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="60"/>
+                <RowDefinition Height="60"/>
+                <RowDefinition Height="auto"/>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+
+            <Grid Grid.Row="0" Padding="0" HeightRequest="50">
+                <Frame BackgroundColor="White" BorderColor="Gray" IsClippedToBounds="False" Padding="10,5" CornerRadius="6">
+                    <Grid>
+                        <Label Text="TASK TITLE" FontSize="10" FontAttributes="Bold" TextColor="Gray" Margin="0"/>
+                        <Entry Placeholder="Title here" Text="{Binding TitleInput}" FontSize="12" Margin="0" FlowDirection="LeftToRight" VerticalOptions="Center" VerticalTextAlignment="Center"/>
+                    </Grid>
+                </Frame>
+            </Grid>
+
+            <Grid Grid.Row="1" Padding="0" Margin="0" ColumnSpacing="10" HeightRequest="50">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="0.5*"/>
+                    <ColumnDefinition Width="0.5*"/>
+                </Grid.ColumnDefinitions>
+
+                <Frame Padding="10,5"  BackgroundColor="White" BorderColor="Gray" IsClippedToBounds="False" CornerRadius="6" Grid.Column="0">
+                    <Grid>
+                        <Label Text="DATE" FontSize="12" FontAttributes="Bold" TextColor="Gray"/>
+                        <DatePicker Date="{Binding SelectedDateInput}" x:Name="DatePickerElement" FontSize="12" TextColor="Black"/>
+                    </Grid>
+                </Frame>
+
+                <Frame  Padding="10,5" BackgroundColor="White" BorderColor="Gray" IsClippedToBounds="False" CornerRadius="6" Grid.Column="1">
+                    <Grid>
+                        <Label Text="TIME" FontSize="12" FontAttributes="Bold" TextColor="Gray"/>
+                        <TimePicker Time="{Binding SelectedTimeInput}" x:Name="TimePickerElement" FontSize="12" TextColor="Black" Margin="0"/>
+                    </Grid>
+                </Frame>
+            </Grid>
+
+            <VerticalStackLayout Grid.Row="2" Margin="0,5">
+                <Frame BackgroundColor="White" BorderColor="Gray" IsClippedToBounds="False" Padding="10,5" CornerRadius="8">
+
+                    <Grid ColumnSpacing="10">
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="auto"/>
+                            <RowDefinition Height="auto"/>
+                            <RowDefinition Height="auto"/>
+                        </Grid.RowDefinitions>
+
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="0.33*"/>
+                            <ColumnDefinition Width="0.33*"/>
+                            <ColumnDefinition Width="0.33*"/>
+                        </Grid.ColumnDefinitions>
+                        
+                        <!--
+                        <Frame ZIndex="2" Grid.Row="0" Grid.ColumnSpan="3" BackgroundColor="White" BorderColor="Gray" IsClippedToBounds="False" Padding="10,5" CornerRadius="8" MinimumHeightRequest="10" Margin="0,10">
+                            <CollectionView SelectionMode="None" ItemsSource="{Binding AddedPlants}">
+                                <CollectionView.ItemTemplate>
+                                    <DataTemplate>
+                                        <Label Text="{Binding . , StringFormat='• {0}'}" LineHeight="1.15" TextColor="Black" FontSize="12" Margin="0,2"/>
+                                    </DataTemplate>
+                                </CollectionView.ItemTemplate>
+                            </CollectionView>
+                        </Frame>-->
+
+                        <CollectionView ZIndex="2" Grid.Row="0" Grid.ColumnSpan="3" Margin="0,10" SelectionMode="None" ItemsSource="{Binding AddedPlants}">
+                            <CollectionView.ItemTemplate>
+                                <DataTemplate x:DataType="{x:Type x:String}">
+                                    <Frame IsClippedToBounds="False" Padding="10,5" CornerRadius="8" Margin="0,5">
+                                        <Label Text="{Binding . , StringFormat='• {0}'}" LineHeight="1.15" TextColor="Black" FontSize="12" Margin="0,2"/>
+                                    </Frame>
+                                </DataTemplate>
+                            </CollectionView.ItemTemplate>
+                        </CollectionView>
+
+                        <Grid Grid.Row="1">
+                            <Label Text="PLANT" FontSize="10" FontAttributes="Bold" TextColor="Gray" Margin="0"/>
+                            <Entry Text="{Binding PlantInput}" Placeholder="Plant X" FontSize="12" Margin="0" FlowDirection="LeftToRight" VerticalOptions="Center" VerticalTextAlignment="Center"/>
+                        </Grid>
+
+                        <Grid Grid.Row="1" Grid.Column="1">
+                            <Label Text="NUTRIENT" FontSize="10" FontAttributes="Bold" TextColor="Gray" Margin="0"/>
+                            <Entry Text="{Binding NutrientInput}" Placeholder="Nutrient X" FontSize="12" Margin="0" FlowDirection="LeftToRight" VerticalOptions="Center" VerticalTextAlignment="Center"/>
+                        </Grid>
+
+                        <Grid Grid.Row="1" Grid.Column="2">
+                            <Label Text="AMOUNT(ml)" FontSize="10" FontAttributes="Bold" TextColor="Gray" Margin="0"/>
+                            <Entry Keyboard="Numeric" Text="{Binding AmountInput}" Placeholder="0" FontSize="12" Margin="0" FlowDirection="LeftToRight" VerticalOptions="Center" VerticalTextAlignment="Center"/>
+                        </Grid>
+
+                        <Button Command="{Binding AddPlantToListCommand}" Margin="0,5" Background="Gray" Grid.Row="2" Grid.ColumnSpan="3" Text="ADD PLANT" FontSize="10" WidthRequest="90" HeightRequest="33"/>
+                    </Grid>
+                </Frame>
+
+                
+            </VerticalStackLayout>
+
+
+
+            <VerticalStackLayout Grid.Row="3">
+                <Frame Padding="10,5" BackgroundColor="White" BorderColor="Gray" IsClippedToBounds="False" CornerRadius="6" VerticalOptions="Start" Margin="0,5">
+                    <Grid>
+                        <Label Text="NOTE" FontSize="10" FontAttributes="Bold" TextColor="Gray" Margin="0"/>
+                        <Entry Text="{Binding NoteInput}" Placeholder="Place your note here" FontSize="12" Margin="0" FlowDirection="LeftToRight" VerticalOptions="Center" VerticalTextAlignment="Center"/>
+                    </Grid>
+                </Frame>
+
+                <Button VerticalOptions="Start" Command="{Binding FinalizePlanCommand}" Margin="0,5" Background="{DynamicResource Primary}" Text="CREATE PLAN" FontSize="12" WidthRequest="150" HeightRequest="35"/>
+            </VerticalStackLayout>
+        </Grid>
+    </ScrollView>
+</ContentPage>

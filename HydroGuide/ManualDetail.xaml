@@ -8,19 +8,11 @@
                          Title="{Binding ManualCategory}">
     <ScrollView>
         <VerticalStackLayout Margin="20,10">
-            <Image Source="{Binding ManualImage}" Margin="0,10"/>
-            <Label 
-        Text="{Binding ManualName}"
-        TextColor="{StaticResource AboutPagePrimary}"
-        VerticalOptions="Center" 
-        FontAttributes="Bold"
-        FontSize="16"
-        Margin="0,10"/>
-            <Label Text="{Binding ManualDetail, StringFormat='    {0}'}"
-   LineHeight="1.15"
-   TextColor="{StaticResource AboutPagePrimary}"
-   FontSize="12"/>
-
+            <Frame Margin="0,10"  IsClippedToBounds="True" BackgroundColor="Transparent" CornerRadius="15" Padding="0">
+                <Image Source="{Binding ManualImage}" Aspect="AspectFill"/>
+            </Frame>
+            <Label Text="{Binding ManualName}" TextColor="{StaticResource AboutPagePrimary}" VerticalOptions="Center"  FontAttributes="Bold" FontSize="16" Margin="0,10"/>
+            <Label Text="{Binding ManualDetail, StringFormat='    {0}'}" LineHeight="1.15" TextColor="{StaticResource AboutPagePrimary}" FontSize="12"/>
         </VerticalStackLayout>
     </ScrollView>
 </ContentPage>

@@ -10,7 +10,9 @@
     
     <ScrollView>
         <VerticalStackLayout Margin="20,10">
-            <Image Source="hydroponic_cover" Margin="0,10"/>
+            <Frame Margin="0,20"  IsClippedToBounds="True" BackgroundColor="Transparent" CornerRadius="15" Padding="0">
+                <Image Source="hydroponic_cover" Aspect="AspectFill"/>
+            </Frame>
             <Label FontAttributes="Bold" FontSize="16" Text="HYDROPONIC FARMING" TextColor="{StaticResource AboutPagePrimary}"/>
             <Label TextColor="{StaticResource AboutPagePrimary}" FontSize="12" VerticalOptions="StartAndExpand" HorizontalOptions="StartAndExpand" Text="     Hydroponic farming is a method of growing plants without soil, using nutrient-rich water to supply plants with the nutrients they need. This farming method is increasingly popular, especially among farmers with limited land, because it allows for efficient crop growth in small spaces and often requires less water than traditional soil-based farming. Here’s a guide to help farmers with limited knowledge understand hydroponic farming and improve their practices:"/>
 

@@ -20,8 +20,13 @@ namespace HydroGuide
                     fonts.AddFont("OpenSans-Semibold.ttf", "OpenSansSemibold");
                 });
 
-//#if DEBUG
-            builder.Logging.AddDebug();
+            //#if DEBUG
+            #if DEBUG
+                        builder.Logging.AddDebug();
+            #else
+                        builder.ConfigureMauiHandlers(handlers => { });
+            #endif
+
 
             //Register all page and vm
             builder.Services.AddSingleton<BigMama>();
@@ -37,9 +42,20 @@ namespace HydroGuide
             builder.Services.AddTransient<ManualDetailViewModel>();
 
             builder.Services.AddSingleton<ToDoListPage>();
+            builder.Services.AddSingleton<ToDoListViewModel>();
+            builder.Services.AddSingleton<TDLDatabaseService>();
+
+            builder.Services.AddTransient<ToDoListDetail>();
+            builder.Services.AddTransient<ToDoListDetailViewModel>();
+
+            builder.Services.AddTransient<ToDoListNew>();
+            builder.Services.AddTransient<ToDoListNewViewModel>();
+
 
             builder.Services.AddSingleton<ConvertPage>();
 //#endif
+
+
 
             return builder.Build();
         }
