@@ -21,17 +21,22 @@ public partial class ToDoListViewModel(BigMama BigMamaService, TDLDatabaseServic
     {
         try
         {
-            Debug.WriteLine(s.Plants);
+            Debug.WriteLine($"DayDuration: {s.DayDuration}");
+            Debug.WriteLine($"OnceEvery: {s.OnceEvery}");
+            Debug.WriteLine($"Accompplished Day: {s.AccomplishedDay}");
 
-           await Shell.Current.GoToAsync($"{nameof(ToDoListDetail)}",
+            await Shell.Current.GoToAsync($"{nameof(ToDoListDetail)}",
            new Dictionary<string, object>
            {
-                { "TdlTitle", s.Title ?? "N/A"},
-                { "TdlDate", s.Date ?? "N/A"},
-                { "TdlTime", s.Time ?? "N/A"},
-                { "TdlPlants", s.Plants ?? "N/A"},
-                { "TdlNotes", s.Notes ?? "N/A"},
-                { "TdlAccomplished", s.Accomplished.ToString()}
+                { "TdlTitle", s.Title},
+                { "TdlDate", s.Date},
+                { "TdlTime", s.Time},
+                { "TdlPlants", s.Plants},
+                { "TdlNotes", s.Notes},
+                { "TdlAccomplished", s.Accomplished.ToString()},
+                { "TdlOnceEvery", s.OnceEvery.ToString()},
+               { "TdlDayDuration", s.DayDuration.ToString()},
+               { "TdlDayCheck", s.AccomplishedDay}
            });
         }
         catch (Exception ex)
@@ -71,6 +76,24 @@ public partial class ToDoListViewModel(BigMama BigMamaService, TDLDatabaseServic
             {
                 foreach (TDLObject TDLInfo in todolist)
                 {
+                    // Split the string by commas and update the plantslist
+                    if (!string.IsNullOrEmpty(TDLInfo.Plants))
+                    {
+
+                        var accomplishedDays = TDLInfo.AccomplishedDay.Split(',');
+
+                        int count = 0;
+                        for (int i = 0; i < TDLInfo.DayDuration; i += TDLInfo.OnceEvery)
+                        {
+
+                            count++;
+                        }
+
+                        Debug.Write($"LIST TASK: {count} == ACCOMPLISHED DAYS: {TDLInfo.AccomplishedDay}");
+                        if (count <= accomplishedDays.Length)
+                            TDLInfo.Accomplished = true;
+                    }
+
                     //await Task.Delay(400);
                     ToDoList.Add(TDLInfo);
                 }

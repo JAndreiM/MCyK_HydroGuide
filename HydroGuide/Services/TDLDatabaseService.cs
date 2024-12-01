@@ -34,7 +34,7 @@ namespace HydroGuide.Services
                     throw new InvalidOperationException("Database connection is not initialized.");
 
                 var records = _database.Table<TDLObject>().ToList();
-                return records ?? new List<TDLObject>(); // Return an empty list if null
+                return records ?? []; // Return an empty list if null
             });
         }
 
@@ -43,5 +43,44 @@ namespace HydroGuide.Services
         {
             return await Task.Run(() => _database.Delete<TDLObject>(id));
         }
+
+        public void UpdateAccomplishedDay(string plantTitle, string newAccomplishedDay)
+        {
+            // Retrieve the plant
+            var plant = _database.Table<TDLObject>().FirstOrDefault(x => x.Title == plantTitle);
+
+            if (plant != null)
+            {
+                // Update properties
+                plant.AccomplishedDay = newAccomplishedDay;
+                
+                // Save changes
+                object value = _database.Update(plant);
+            }
+            else
+            {
+                Console.WriteLine("Plant not found.");
+            }
+        }
+
+        public void UpdateTaskAccomplished(string plantTitle, bool status)
+        {
+            // Retrieve the plant
+            var plant = _database.Table<TDLObject>().FirstOrDefault(x => x.Title == plantTitle);
+
+            if (plant != null)
+            {
+                // Update properties
+                plant.Accomplished = status;
+
+                // Save changes
+                object value = _database.Update(plant);
+            }
+            else
+            {
+                Console.WriteLine("Plant not found.");
+            }
+        }
+
     }
 }

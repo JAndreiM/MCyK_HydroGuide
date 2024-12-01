@@ -14,10 +14,11 @@ public partial class ToDoListPage : ContentPage
 		BindingContext = vm;
 		_todolistViewModel = vm;
 
-        //ToDoList.Add(new TDLObject { Title = "Task 1", Date = DateTime.Today.ToString("yyyy/MM/dd - dddd"), Time = DateTime.Now.ToString("HH:mm tt"), Plants = "Plant A > Use # ml of nutrient A?#@Plant B > Use # ml of nutrient B?#@Plant E > Use # ml of nutrient A", Notes = "Can be found in sector C of the Garden.", Accomplished = true });
+        //ToDoList.Add(new TDLObject { Title = "Task 1", Date = DateTime.Today.ToString("yyyy/MM/dd - dddd"), Time = DateTime.Now.ToString("HH:mm tt"), Plants = "Plant A > Use # ml of nutrient A?#@Plant B > Use # ml of nutrient B?#@Plant E > Use # ml of nutrient A", Notes = "Can be found in sector C of the Garden.", Accomplished = true, OnceEvery= 3, DayDuration = 3, AccomplishedDay = "" });
         //ppList.ItemsSource = ToDoList;
-    
+
     }
+
 
     protected override void OnAppearing()
     {

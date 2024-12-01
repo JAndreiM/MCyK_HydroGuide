@@ -30,6 +30,7 @@ namespace HydroGuide
 
             //Register all page and vm
             builder.Services.AddSingleton<BigMama>();
+            builder.Services.AddSingleton<SyncService>();
 
             builder.Services.AddSingleton<AboutPage>();
 
@@ -37,6 +38,7 @@ namespace HydroGuide
 
             builder.Services.AddSingleton<ManualPage>();
             builder.Services.AddSingleton<ManualViewModel>();
+            builder.Services.AddSingleton<ManualDatabaseService>();
 
             builder.Services.AddTransient<ManualDetail>();
             builder.Services.AddTransient<ManualDetailViewModel>();

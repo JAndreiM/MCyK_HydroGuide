@@ -15,6 +15,7 @@
     <Grid>
         <ImageButton ZIndex="2" Command="{Binding TapForNewCommand}" Source="positive.svg" Background="{StaticResource Primary}" HeightRequest="50" WidthRequest="50" CornerRadius="12" HorizontalOptions="End" VerticalOptions="End" Margin="40"/>
 
+        <!-- ItemsSource="{Binding ToDoList}" -->
         <CollectionView ItemsSource="{Binding ToDoList}" x:Name="ppList" SelectionMode="None" Margin="25,15">
             <CollectionView.ItemTemplate>
                 <DataTemplate x:DataType="model:TDLObject">
@@ -57,7 +58,7 @@
                                 </Label.FormattedText>
                             </Label>
 
-                            <CheckBox Background="Transparent" HorizontalOptions="End" Color="White" Margin="10,0" IsChecked="{Binding Accomplished}"/>
+                            <CheckBox IsEnabled="False" Background="Transparent" HorizontalOptions="End" Color="White" Margin="10,0" IsChecked="{Binding Accomplished}"/>
                         </Grid>
                     </SwipeView>
                 </DataTemplate>

@@ -7,22 +7,84 @@
              x:DataType="viewmodel:ToDoListDetailViewModel"
              Title="TO-DO INFO">
     <ScrollView>
-        <VerticalStackLayout Margin="20,10">
-            <Label Text="{Binding TdlTitle}" TextColor="{StaticResource AboutPagePrimary}" VerticalOptions="Center" FontAttributes="Bold" FontSize="24" Margin="0,10"/>
+        <Grid Margin="20,10">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="auto"/>
+                <RowDefinition Height="auto"/>
+                <RowDefinition Height="auto"/>
+                <RowDefinition Height="auto"/>
+            </Grid.RowDefinitions>
 
-            <Label Text="{Binding TdlDate, StringFormat='DATE: {0}'}" TextColor="SlateGray" VerticalOptions="Center" FontAttributes="Bold" FontSize="16" />
-            <Label Text="{Binding TdlTime, StringFormat='TIME: {0}'}" TextColor="SlateGray" VerticalOptions="Center" FontAttributes="Bold" FontSize="16"/>
+            <!-- Title Section -->
+            <Frame Grid.Row="0" IsClippedToBounds="False" Padding="10" Margin="0,5">
+                <StackLayout>
+                    <Label Text="{Binding TdlTitle}" 
+                           TextColor="{StaticResource AboutPagePrimary}" 
+                           VerticalOptions="Center" 
+                           FontAttributes="Bold" 
+                           FontSize="24"/>
+                    <Label Text="{Binding TdlDate, StringFormat='DATE: {0}'}" 
+                           TextColor="SlateGray" 
+                           VerticalOptions="Center" 
+                           FontAttributes="Bold" 
+                           FontSize="16" />
+                    <Label Text="{Binding TdlTime, StringFormat='TIME: {0}'}" 
+                           TextColor="SlateGray" 
+                           VerticalOptions="Center" 
+                           FontAttributes="Bold" 
+                           FontSize="16"/>
+                </StackLayout>
+            </Frame>
 
-            <CollectionView ZIndex="2" SelectionMode="None" ItemsSource="{Binding Plantslist}" Margin="0,15">
-                <CollectionView.ItemTemplate>
-                    <DataTemplate x:DataType="{x:Type x:String}">
-                        <Label ZIndex="3" Text="{Binding . , StringFormat='• {0}'}" TextColor="Black" FontSize="12"/>
-                    </DataTemplate>
-                </CollectionView.ItemTemplate>
-            </CollectionView>
+            <!-- Plants List Section -->
+            <Frame Grid.Row="1" IsClippedToBounds="False" Padding="10,5" Margin="0,5">
+                <CollectionView SelectionMode="None" 
+                                ItemsSource="{Binding Plantslist}" >
+                    <CollectionView.ItemTemplate>
+                        <DataTemplate x:DataType="x:String">
+                            <Label Text="{Binding . , StringFormat='• {0}'}" 
+                                   TextColor="Black" 
+                                   FontSize="12"
+                                   Padding="0,2"/>
+                        </DataTemplate>
+                    </CollectionView.ItemTemplate>
+                </CollectionView>
+            </Frame>
 
-            <Label Text="NOTE" TextColor="SlateGray" VerticalOptions="Center" FontAttributes="Bold" FontSize="16" Margin="0,10"/>
-            <Label Text="{Binding TdlNotes, StringFormat='• {0}'}" LineHeight="1.15" TextColor="{StaticResource AboutPagePrimary}" FontSize="14"/>
-        </VerticalStackLayout>
+            <!-- Notes Section -->
+            <Frame Grid.Row="2" IsClippedToBounds="False" Padding="10,5" Margin="0,5">
+                <StackLayout>
+                    <Label Text="NOTE" 
+                           TextColor="SlateGray" 
+                           VerticalOptions="Center" 
+                           FontAttributes="Bold" 
+                           FontSize="16" />
+                    <Label Text="{Binding TdlNotes, StringFormat='• {0}'}" 
+                           TextColor="{StaticResource AboutPagePrimary}" 
+                           FontSize="14"/>
+                </StackLayout>
+            </Frame>
+
+            <Frame Grid.Row="3" IsClippedToBounds="False" Padding="10,5" Margin="0,5">
+
+                <VerticalStackLayout>
+                    <Label Text="{Binding TdlOnceEvery, StringFormat='TASKED TO DO ONCE EVERY {0} DAY'}" FontSize="12" HorizontalOptions="Center" Margin="0,5"/>
+
+                    <CollectionView SelectionMode="None" ItemsSource="{Binding DayTallyList}" >
+                        <CollectionView.ItemTemplate>
+                            <DataTemplate x:DataType="model:DayTallyObject">
+                                <Grid Padding="0,2">
+                                    <Frame HeightRequest="40" BackgroundColor="Gray" BorderColor="Transparent">
+
+                                    </Frame>
+                                    <Label Text="{Binding CDate}" FontSize="10"   FontAttributes="Bold"  HorizontalTextAlignment="Start"  VerticalTextAlignment="Center" Margin="10,0" TextColor="{StaticResource White}"/>
+                                    <CheckBox CheckedChanged="Checkboxpressed"  Background="Transparent" HorizontalOptions="End" Color="White" Margin="10,0" IsChecked="{Binding IsAccomplished}"/>
+                                </Grid>
+                            </DataTemplate>
+                        </CollectionView.ItemTemplate>
+                    </CollectionView>
+                </VerticalStackLayout>
+            </Frame>
+        </Grid>
     </ScrollView>
 </ContentPage>

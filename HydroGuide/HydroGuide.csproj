@@ -133,6 +133,7 @@
 	  <None Remove="Resources\Images\textimage.png" />
 	  <None Remove="Resources\Images\todolistframe.png" />
 	  <None Remove="Resources\Images\tree_planting.png" />
+	  <None Remove="Resources\Images\xSVG.svg" />
 	  <None Remove="Resources\Raw\manualobjectdata.json" />
 	</ItemGroup>
 
@@ -150,7 +151,6 @@
 		<PackageReference Include="Microsoft.Maui.Controls.Compatibility" Version="8.0.92" />
 		<PackageReference Include="Microsoft.Extensions.Logging.Debug" Version="8.0.1" />
 		<PackageReference Include="Microsoft.Maui.Essentials" Version="8.0.92" />
-		<PackageReference Include="MvvmLightLibs" Version="5.4.1.1" />
 		<PackageReference Include="sqlite-net-pcl" Version="1.9.172" />
 	</ItemGroup>
 

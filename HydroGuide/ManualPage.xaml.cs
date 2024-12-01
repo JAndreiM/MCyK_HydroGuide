@@ -14,14 +14,16 @@ public partial class ManualPage : ContentPage
 		InitializeComponent();
 		BindingContext = vm;
         _manualViewModel = vm;
-    }
-
-    protected override void OnAppearing()
-    {
-        base.OnAppearing();
 
         _ = _manualViewModel.GetManualListCommand.ExecuteAsync(null);  // Execute the command
     }
+
+    //protected override void OnAppearing()
+    //{
+    //    base.OnAppearing();
+
+    //    _ = _manualViewModel.GetManualListCommand.ExecuteAsync(null);  // Execute the command
+    //}
 
     //protected override async void OnAppearing()
     //{

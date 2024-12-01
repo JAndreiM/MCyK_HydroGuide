@@ -11,6 +11,7 @@
             <Grid.RowDefinitions>
                 <RowDefinition Height="60"/>
                 <RowDefinition Height="60"/>
+                <RowDefinition Height="45"/>
                 <RowDefinition Height="auto"/>
                 <RowDefinition Height="*"/>
             </Grid.RowDefinitions>
@@ -32,20 +33,47 @@
 
                 <Frame Padding="10,5"  BackgroundColor="White" BorderColor="Gray" IsClippedToBounds="False" CornerRadius="6" Grid.Column="0">
                     <Grid>
-                        <Label Text="DATE" FontSize="12" FontAttributes="Bold" TextColor="Gray"/>
-                        <DatePicker Date="{Binding SelectedDateInput}" x:Name="DatePickerElement" FontSize="12" TextColor="Black"/>
+                        <Label Text="DATE" FontSize="10" FontAttributes="Bold" TextColor="Gray"/>
+                        <DatePicker Date="{Binding SelectedDateInput}" x:Name="DatePickerElement" FontSize="12" TextColor="Black" Margin="0,1"/>
                     </Grid>
                 </Frame>
 
                 <Frame  Padding="10,5" BackgroundColor="White" BorderColor="Gray" IsClippedToBounds="False" CornerRadius="6" Grid.Column="1">
                     <Grid>
-                        <Label Text="TIME" FontSize="12" FontAttributes="Bold" TextColor="Gray"/>
-                        <TimePicker Time="{Binding SelectedTimeInput}" x:Name="TimePickerElement" FontSize="12" TextColor="Black" Margin="0"/>
+                        <Label Text="TIME" FontSize="10" FontAttributes="Bold" TextColor="Gray"/>
+                        <TimePicker Time="{Binding SelectedTimeInput}" x:Name="TimePickerElement" FontSize="12" TextColor="Black" Margin="0,1"/>
                     </Grid>
                 </Frame>
             </Grid>
 
-            <VerticalStackLayout Grid.Row="2" Margin="0,5">
+            <Grid Grid.Row="2" Padding="0" Margin="0" ColumnSpacing="10" HeightRequest="50">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="0.5*"/>
+                    <ColumnDefinition Width="0.5*"/>
+                </Grid.ColumnDefinitions>
+
+                <Frame Padding="10,0" HeightRequest="35" BackgroundColor="White" BorderColor="Gray" IsClippedToBounds="False" CornerRadius="6" Grid.Column="0">
+                    <Grid>
+                        <HorizontalStackLayout>
+                            <Label Text="PLAN DURATION:" FontSize="10" FontAttributes="Bold" TextColor="Gray" VerticalOptions="Center" VerticalTextAlignment="Center" Margin="0"/>
+                            <Entry Text="{Binding PlandurationInput}" Keyboard="Numeric" Placeholder="1" WidthRequest="30" HorizontalTextAlignment="Center" FontSize="10" Margin="0" FlowDirection="LeftToRight" VerticalOptions="Center" VerticalTextAlignment="Center"/>
+                            <Label Text="DAY/S" FontSize="10" FontAttributes="Bold" TextColor="Gray" VerticalOptions="Center" VerticalTextAlignment="Center" Margin="0"/>
+                        </HorizontalStackLayout>
+                    </Grid>
+                </Frame>
+
+                <Frame  Padding="10,0" HeightRequest="35" BackgroundColor="White" BorderColor="Gray" IsClippedToBounds="False" CornerRadius="6" Grid.Column="1">
+                    <Grid>
+                        <HorizontalStackLayout>
+                            <Label Text="ONCE EVERY" FontSize="10" FontAttributes="Bold" TextColor="Gray" VerticalOptions="Center" VerticalTextAlignment="Center" Margin="0"/>
+                            <Entry Text="{Binding OnceeveryInput}" Keyboard="Numeric" Placeholder="1" WidthRequest="30" HorizontalTextAlignment="Center" FontSize="10" Margin="0" FlowDirection="LeftToRight" VerticalOptions="Center" VerticalTextAlignment="Center"/>
+                            <Label Text="DAY/S" FontSize="10" FontAttributes="Bold" TextColor="Gray" VerticalOptions="Center" VerticalTextAlignment="Center" Margin="0"/>
+                        </HorizontalStackLayout>
+                    </Grid>
+                </Frame>
+            </Grid>
+
+            <VerticalStackLayout Grid.Row="3" Margin="0,5">
                 <Frame BackgroundColor="White" BorderColor="Gray" IsClippedToBounds="False" Padding="10,5" CornerRadius="8">
 
                     <Grid ColumnSpacing="10">
@@ -75,8 +103,11 @@
                         <CollectionView ZIndex="2" Grid.Row="0" Grid.ColumnSpan="3" Margin="0,10" SelectionMode="None" ItemsSource="{Binding AddedPlants}">
                             <CollectionView.ItemTemplate>
                                 <DataTemplate x:DataType="{x:Type x:String}">
-                                    <Frame IsClippedToBounds="False" Padding="10,5" CornerRadius="8" Margin="0,5">
-                                        <Label Text="{Binding . , StringFormat='• {0}'}" LineHeight="1.15" TextColor="Black" FontSize="12" Margin="0,2"/>
+                                    <Frame IsClippedToBounds="False" Padding="10,5" CornerRadius="8" Margin="0,2">
+                                        <Grid>
+                                            <Label Text="{Binding . , StringFormat='• {0}'}" LineHeight="1.15" TextColor="Black" FontSize="12" Margin="0,2"/>
+                                            <ImageButton Command="{Binding Source={RelativeSource AncestorType={x:Type viewmodel:ToDoListNewViewModel}}, Path=RemovePlantCommand}" CommandParameter="{Binding .}" Source="xsvg.svg" HorizontalOptions="End" VerticalOptions="Center" WidthRequest="20" HeightRequest="20"/>
+                                        </Grid>
                                     </Frame>
                                 </DataTemplate>
                             </CollectionView.ItemTemplate>
@@ -106,7 +137,7 @@
 
 
 
-            <VerticalStackLayout Grid.Row="3">
+            <VerticalStackLayout Grid.Row="4">
                 <Frame Padding="10,5" BackgroundColor="White" BorderColor="Gray" IsClippedToBounds="False" CornerRadius="6" VerticalOptions="Start" Margin="0,5">
                     <Grid>
                         <Label Text="NOTE" FontSize="10" FontAttributes="Bold" TextColor="Gray" Margin="0"/>

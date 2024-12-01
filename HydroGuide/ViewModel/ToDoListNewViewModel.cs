@@ -38,7 +38,38 @@ namespace HydroGuide.ViewModel
         string? amountInput;
 
         [ObservableProperty]
+        string? plandurationInput;
+
+        [ObservableProperty]
+        string? onceeveryInput;
+
+        [ObservableProperty]
         ObservableCollection<string> addedPlants = [];
+
+        [RelayCommand]
+        async Task RemovePlant(string PlantToExterminate)
+        {
+            if (IsBusy)
+                return;
+
+            try
+            {
+                Debug.Write(PlantToExterminate);
+                IsBusy = true;
+                bool ans = await Shell.Current.DisplayAlert("REMOVE", "Are you certain to remove the selected task?", "YES", "NO");
+                
+                if (ans)
+                    AddedPlants.Remove(PlantToExterminate);
+            }
+            catch(Exception ex)
+            {
+                Debug.WriteLine($"Error while trying to remove a task: {ex}");
+            }
+            finally
+            {
+                IsBusy = false;
+            }
+        }
 
         [RelayCommand]
         async Task AddPlantToList()
@@ -92,7 +123,7 @@ namespace HydroGuide.ViewModel
             // Optionally, remove the last separator (if you don't want it at the end)
             if (fulltaskedplant.EndsWith("?#@"))
             {
-                fulltaskedplant = fulltaskedplant.Substring(0, fulltaskedplant.Length - 4); // Remove last separator
+                fulltaskedplant = fulltaskedplant.Substring(0, fulltaskedplant.Length - 3); // Remove last separator
             }
 
 
@@ -108,7 +139,19 @@ namespace HydroGuide.ViewModel
 
                 if (string.IsNullOrWhiteSpace(TitleInput))
                 {
-                    await Shell.Current.DisplayAlert("Warning", "No task title has been inpuuted", "OK");
+                    await Shell.Current.DisplayAlert("Warning", "No task title has been inputed", "OK");
+                    return;
+                }
+
+                if (string.IsNullOrWhiteSpace(PlandurationInput))
+                {
+                    await Shell.Current.DisplayAlert("Warning", "No task plan duration has been set", "OK");
+                    return;
+                }
+
+                if (string.IsNullOrWhiteSpace(OnceeveryInput))
+                {
+                    await Shell.Current.DisplayAlert("Warning", "No once every when has been set", "OK");
                     return;
                 }
 
@@ -134,7 +177,6 @@ namespace HydroGuide.ViewModel
                 }
 
                 Debug.WriteLine(fulltaskedplant);
-                await Shell.Current.DisplayAlert("Error", fulltaskedplant, "OK");
 
                 bool success = DateTime.TryParse(SelectedDateInput.ToString(), out DateTime RealDealDate);
 
@@ -171,11 +213,14 @@ namespace HydroGuide.ViewModel
                 var taskObject = new TDLObject
                 {
                     Title = TitleInput,
-                    Notes = NoteInput,
+                    Notes = NoteInput ?? "N/A",
                     Plants = fulltaskedplant,
                     Date = RealDealDate.ToString("yyyy/MM/dd - dddd"),
                     Time = formattedTime,
-                    Accomplished = false
+                    Accomplished = false,
+                    OnceEvery = int.Parse(OnceeveryInput ?? "1"),
+                    DayDuration = int.Parse(PlandurationInput ?? "1"),
+                    AccomplishedDay = ""
                 };
 
                 await _databaseService.AddRecord(taskObject);
