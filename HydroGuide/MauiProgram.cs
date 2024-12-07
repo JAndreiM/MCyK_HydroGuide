@@ -54,8 +54,9 @@ namespace HydroGuide
             builder.Services.AddTransient<ToDoListNewViewModel>();
 
 
-            builder.Services.AddSingleton<ConvertPage>();
-//#endif
+            builder.Services.AddTransient<ConvertPage>();
+            builder.Services.AddTransient<ConvertViewModel>();
+            //#endif
 
 
 

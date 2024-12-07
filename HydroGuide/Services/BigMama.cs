@@ -20,6 +20,7 @@ public class BigMama
         _SyncDatabaseService = syncService;
     }
 
+
     List<ManualObject>? ManualList;
     public async Task<List<ManualObject>?> GetManualList()
     {
@@ -83,6 +84,7 @@ public class BigMama
 
         return ManualList;
     }
+
 
     List<TDLObject>? ToDoList;
     public async Task<List<TDLObject>?> GetToDoList()

@@ -54,13 +54,15 @@
          Route="ConvertPage"/>
     </FlyoutItem>
 
+    <!--
     <FlyoutItem Title="Update">
         <ShellContent
          Title="UpdatePage"
          ContentTemplate="{DataTemplate local:UpdatePage}"
          Route="UpdatePage"/>
     </FlyoutItem>
-
+    -->
+    
     <FlyoutItem Title="About">
         <ShellContent
     Title="About"

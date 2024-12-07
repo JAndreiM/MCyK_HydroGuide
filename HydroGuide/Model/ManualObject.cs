@@ -12,4 +12,5 @@ public class ManualObject
     public  string Name { get; set; } = "N/A";
     public  string Details { get; set; } = "N/A";
     public  string Category { get; set; } = "N/A";
+    public double? NutrientMLtoLiter { get; set; }
 }

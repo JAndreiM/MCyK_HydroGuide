@@ -17,7 +17,7 @@
             <Label TextColor="{StaticResource AboutPagePrimary}" FontSize="12" VerticalOptions="StartAndExpand" HorizontalOptions="StartAndExpand" Text="     Hydroponic farming is a method of growing plants without soil, using nutrient-rich water to supply plants with the nutrients they need. This farming method is increasingly popular, especially among farmers with limited land, because it allows for efficient crop growth in small spaces and often requires less water than traditional soil-based farming. Here’s a guide to help farmers with limited knowledge understand hydroponic farming and improve their practices:"/>
 
             <Label FontAttributes="Bold" FontSize="14" Text="1. Basics of Hydroponic Farming" Margin="0,10" TextColor="{StaticResource AboutPagePrimary}"/>
-            <Label Margin="25,0" FontSize="12" VerticalOptions="StartAndExpand" HorizontalOptions="StartAndExpand"  WidthRequest="325">
+            <Label Margin="15,0" FontSize="12" VerticalOptions="StartAndExpand" HorizontalOptions="StartAndExpand">
                 <Label.FormattedText>
                     <FormattedString>
                         <Span TextColor="{StaticResource AboutPagePrimary}" Text="• Definition:" FontAttributes="Bold"/>
@@ -25,7 +25,7 @@
                     </FormattedString>
                 </Label.FormattedText>
             </Label>
-            <Label Margin="25,0" FontSize="12" VerticalOptions="StartAndExpand" HorizontalOptions="StartAndExpand" WidthRequest="325">
+            <Label Margin="15,0" FontSize="12" VerticalOptions="StartAndExpand" HorizontalOptions="StartAndExpand">
                 <Label.FormattedText>
                     <FormattedString>
                         <Span TextColor="{StaticResource AboutPagePrimary}" Text="• How it Works:" FontAttributes="Bold"/>
@@ -33,7 +33,7 @@
                     </FormattedString>
                 </Label.FormattedText>
             </Label>
-            <Label Margin="25,0" FontSize="12" VerticalOptions="StartAndExpand" HorizontalOptions="StartAndExpand" WidthRequest="325">
+            <Label Margin="15,0" FontSize="12" VerticalOptions="StartAndExpand" HorizontalOptions="StartAndExpand">
                 <Label.FormattedText>
                     <FormattedString>
                         <Span TextColor="{StaticResource AboutPagePrimary}" Text="• Types of Systems:" FontAttributes="Bold"/>
@@ -43,7 +43,7 @@
             </Label>
 
             <Label FontAttributes="Bold" FontSize="14" Text="2. Benefits of Hydroponics" Margin="0,10" TextColor="{StaticResource AboutPagePrimary}"/> 
-            <Label Margin="25,0" FontSize="12" VerticalOptions="StartAndExpand" HorizontalOptions="StartAndExpand" WidthRequest="325">
+            <Label Margin="15,0" FontSize="12" VerticalOptions="StartAndExpand" HorizontalOptions="StartAndExpand">
                 <Label.FormattedText>
                     <FormattedString>
                         <Span TextColor="{StaticResource AboutPagePrimary}" Text="• Higher Yields:" FontAttributes="Bold"/>
@@ -51,7 +51,7 @@
                     </FormattedString>
                 </Label.FormattedText>
             </Label>
-            <Label Margin="25,0" FontSize="12" VerticalOptions="StartAndExpand" HorizontalOptions="StartAndExpand" WidthRequest="325">
+            <Label Margin="15,0" FontSize="12" VerticalOptions="StartAndExpand" HorizontalOptions="StartAndExpand">
                 <Label.FormattedText>
                     <FormattedString>
                         <Span TextColor="{StaticResource AboutPagePrimary}" Text="• Space Efficiency:" FontAttributes="Bold"/>
@@ -59,7 +59,7 @@
                     </FormattedString>
                 </Label.FormattedText>
             </Label>
-            <Label Margin="25,0" FontSize="12" VerticalOptions="StartAndExpand" HorizontalOptions="StartAndExpand" WidthRequest="325">
+            <Label Margin="15,0" FontSize="12" VerticalOptions="StartAndExpand" HorizontalOptions="StartAndExpand">
                 <Label.FormattedText>
                     <FormattedString>
                         <Span TextColor="{StaticResource AboutPagePrimary}" Text="• Water Conservation:" FontAttributes="Bold"/>
@@ -67,7 +67,7 @@
                     </FormattedString>
                 </Label.FormattedText>
             </Label>
-            <Label Margin="25,0" FontSize="12" VerticalOptions="StartAndExpand" HorizontalOptions="StartAndExpand" WidthRequest="325">
+            <Label Margin="15,0" FontSize="12" VerticalOptions="StartAndExpand" HorizontalOptions="StartAndExpand">
                 <Label.FormattedText>
                     <FormattedString>
                         <Span TextColor="{StaticResource AboutPagePrimary}" Text="• Reduced Soil-Related Issues:" FontAttributes="Bold"/>
@@ -77,7 +77,7 @@
             </Label>
 
             <Label FontAttributes="Bold" FontSize="14" Text="3. Hydroponic Nutrients and Solutions" Margin="0,10" TextColor="{StaticResource AboutPagePrimary}"/>
-            <Label Margin="25,0" FontSize="12" VerticalOptions="StartAndExpand" HorizontalOptions="StartAndExpand" WidthRequest="325">
+            <Label Margin="15,0" FontSize="12" VerticalOptions="StartAndExpand" HorizontalOptions="StartAndExpand">
                 <Label.FormattedText>
                     <FormattedString>
                         <Span TextColor="{StaticResource AboutPagePrimary}" Text="• Essential Nutrients:" FontAttributes="Bold"/>
@@ -85,7 +85,7 @@
                     </FormattedString>
                 </Label.FormattedText>
             </Label>
-            <Label Margin="25,0" FontSize="12" VerticalOptions="StartAndExpand" HorizontalOptions="StartAndExpand" WidthRequest="325">
+            <Label Margin="15,0" FontSize="12" VerticalOptions="StartAndExpand" HorizontalOptions="StartAndExpand">
                 <Label.FormattedText>
                     <FormattedString>
                         <Span TextColor="{StaticResource AboutPagePrimary}" Text="• pH Levels:" FontAttributes="Bold"/>
@@ -95,7 +95,7 @@
             </Label>
 
             <Label FontAttributes="Bold" FontSize="14" Text="4. Lighting and Temperature" Margin="0,10" TextColor="{StaticResource AboutPagePrimary}"/>
-            <Label Margin="25,0" FontSize="12" VerticalOptions="StartAndExpand" HorizontalOptions="StartAndExpand" WidthRequest="325">
+            <Label Margin="15,0" FontSize="12" VerticalOptions="StartAndExpand" HorizontalOptions="StartAndExpand">
                 <Label.FormattedText>
                     <FormattedString>
                         <Span TextColor="{StaticResource AboutPagePrimary}" Text="• Lighting:" FontAttributes="Bold"/>
@@ -103,7 +103,7 @@
                     </FormattedString>
                 </Label.FormattedText>
             </Label>
-            <Label Margin="25,0" FontSize="12" VerticalOptions="StartAndExpand" HorizontalOptions="StartAndExpand" WidthRequest="325">
+            <Label Margin="15,0" FontSize="12" VerticalOptions="StartAndExpand" HorizontalOptions="StartAndExpand">
                 <Label.FormattedText>
                     <FormattedString>
                         <Span TextColor="{StaticResource AboutPagePrimary}" Text="• Temperature:" FontAttributes="Bold"/>
@@ -113,7 +113,7 @@
             </Label>
 
             <Label FontAttributes="Bold" FontSize="14" Text="5. Common Hydroponic Systems Explained" Margin="0,10" TextColor="{StaticResource AboutPagePrimary}"/>
-            <Label Margin="25,0" FontSize="12" VerticalOptions="StartAndExpand" HorizontalOptions="StartAndExpand" WidthRequest="325">
+            <Label Margin="15,0" FontSize="12" VerticalOptions="StartAndExpand" HorizontalOptions="StartAndExpand">
                 <Label.FormattedText>
                     <FormattedString>
                         <Span TextColor="{StaticResource AboutPagePrimary}" Text="• Nutrient Film Technique (NFT):" FontAttributes="Bold"/>
@@ -121,7 +121,7 @@
                     </FormattedString>
                 </Label.FormattedText>
             </Label>
-            <Label Margin="25,0" FontSize="12" VerticalOptions="StartAndExpand" HorizontalOptions="StartAndExpand" WidthRequest="325" TextColor="{StaticResource AboutPagePrimary}">
+            <Label Margin="15,0" FontSize="12" VerticalOptions="StartAndExpand" HorizontalOptions="StartAndExpand" TextColor="{StaticResource AboutPagePrimary}">
                 <Label.FormattedText>
                     <FormattedString>
                         <Span TextColor="{StaticResource AboutPagePrimary}" Text="• Deep Water Culture (DWC):" FontAttributes="Bold"/>
@@ -129,7 +129,7 @@
                     </FormattedString>
                 </Label.FormattedText>
             </Label>
-            <Label Margin="25,0" FontSize="12" VerticalOptions="StartAndExpand" HorizontalOptions="StartAndExpand" WidthRequest="325">
+            <Label Margin="15,0" FontSize="12" VerticalOptions="StartAndExpand" HorizontalOptions="StartAndExpand">
                 <Label.FormattedText>
                     <FormattedString>
                         <Span TextColor="{StaticResource AboutPagePrimary}" Text="• Drip System:" FontAttributes="Bold"/>
@@ -137,7 +137,7 @@
                     </FormattedString>
                 </Label.FormattedText>
             </Label>
-            <Label Margin="25,0" FontSize="12" VerticalOptions="StartAndExpand" HorizontalOptions="StartAndExpand" WidthRequest="325">
+            <Label Margin="15,0" FontSize="12" VerticalOptions="StartAndExpand" HorizontalOptions="StartAndExpand">
                 <Label.FormattedText>
                     <FormattedString>
                         <Span TextColor="{StaticResource AboutPagePrimary}" Text="• Aeroponics:" FontAttributes="Bold"/>
@@ -147,7 +147,7 @@
             </Label>
 
             <Label FontAttributes="Bold" FontSize="14" Text="6. Setting Up a Basic Hydroponic System" Margin="0,10" TextColor="{StaticResource AboutPagePrimary}"/>
-            <Label Margin="25,0" FontSize="12" VerticalOptions="StartAndExpand" HorizontalOptions="StartAndExpand" WidthRequest="325">
+            <Label Margin="15,0" FontSize="12" VerticalOptions="StartAndExpand" HorizontalOptions="StartAndExpand">
                 <Label.FormattedText>
                     <FormattedString>
                         <Span TextColor="{StaticResource AboutPagePrimary}" Text="• Select the Right Crops:" FontAttributes="Bold"/>
@@ -155,7 +155,7 @@
                     </FormattedString>
                 </Label.FormattedText>
             </Label>
-            <Label Margin="25,0" FontSize="12" VerticalOptions="StartAndExpand" HorizontalOptions="StartAndExpand" WidthRequest="325">
+            <Label Margin="15,0" FontSize="12" VerticalOptions="StartAndExpand" HorizontalOptions="StartAndExpand">
                 <Label.FormattedText>
                     <FormattedString>
                         <Span TextColor="{StaticResource AboutPagePrimary}" Text="• Choose a System:" FontAttributes="Bold"/>
@@ -163,7 +163,7 @@
                     </FormattedString>
                 </Label.FormattedText>
             </Label>
-            <Label Margin="25,0" FontSize="12" VerticalOptions="StartAndExpand" HorizontalOptions="StartAndExpand" WidthRequest="325">
+            <Label Margin="15,0" FontSize="12" VerticalOptions="StartAndExpand" HorizontalOptions="StartAndExpand">
                 <Label.FormattedText>
                     <FormattedString>
                         <Span TextColor="{StaticResource AboutPagePrimary}" Text="• Prepare the Nutrient Solution:" FontAttributes="Bold"/>
@@ -171,7 +171,7 @@
                     </FormattedString>
                 </Label.FormattedText>
             </Label>
-            <Label Margin="25,0" FontSize="12" VerticalOptions="StartAndExpand" HorizontalOptions="StartAndExpand" WidthRequest="325">
+            <Label Margin="15,0" FontSize="12" VerticalOptions="StartAndExpand" HorizontalOptions="StartAndExpand">
                 <Label.FormattedText>
                     <FormattedString>
                         <Span TextColor="{StaticResource AboutPagePrimary}" Text="• Monitor Regularly:" FontAttributes="Bold"/>
@@ -181,7 +181,7 @@
             </Label>
 
             <Label FontAttributes="Bold" FontSize="14" Text="7. Tips for Success" Margin="0,10" TextColor="{StaticResource AboutPagePrimary}"/>
-            <Label Margin="25,0" FontSize="12" VerticalOptions="StartAndExpand" HorizontalOptions="StartAndExpand" WidthRequest="325">
+            <Label Margin="15,0" FontSize="12" VerticalOptions="StartAndExpand" HorizontalOptions="StartAndExpand">
                 <Label.FormattedText>
                     <FormattedString>
                         <Span TextColor="{StaticResource AboutPagePrimary}" Text="• Start Small:" FontAttributes="Bold"/>
@@ -189,7 +189,7 @@
                     </FormattedString>
                 </Label.FormattedText>
             </Label>
-            <Label Margin="25,0" FontSize="12" VerticalOptions="StartAndExpand" HorizontalOptions="StartAndExpand" WidthRequest="325">
+            <Label Margin="15,0" FontSize="12" VerticalOptions="StartAndExpand" HorizontalOptions="StartAndExpand">
                 <Label.FormattedText>
                     <FormattedString>
                         <Span TextColor="{StaticResource AboutPagePrimary}" Text="• Invest in Quality Equipment:" FontAttributes="Bold"/>
@@ -197,7 +197,7 @@
                     </FormattedString>
                 </Label.FormattedText>
             </Label>
-            <Label Margin="25,0" FontSize="12" VerticalOptions="StartAndExpand" HorizontalOptions="StartAndExpand" WidthRequest="325">
+            <Label Margin="15,0" FontSize="12" VerticalOptions="StartAndExpand" HorizontalOptions="StartAndExpand">
                 <Label.FormattedText>
                     <FormattedString>
                         <Span TextColor="{StaticResource AboutPagePrimary}" Text="• Track Growth and Conditions:" FontAttributes="Bold"/>
@@ -205,7 +205,7 @@
                     </FormattedString>
                 </Label.FormattedText>
             </Label>
-            <Label Margin="25,0" FontSize="12" VerticalOptions="StartAndExpand" HorizontalOptions="StartAndExpand" WidthRequest="325">
+            <Label Margin="15,0" FontSize="12" VerticalOptions="StartAndExpand" HorizontalOptions="StartAndExpand">
                 <Label.FormattedText>
                     <FormattedString>
                         <Span TextColor="{StaticResource AboutPagePrimary}" Text="• Educate and Experiment:" FontAttributes="Bold"/>
@@ -215,7 +215,7 @@
             </Label>
 
             <Label FontAttributes="Bold" FontSize="14" Text="8. Challenges to Consider" Margin="0,10" TextColor="{StaticResource AboutPagePrimary}"/>
-            <Label Margin="25,0" FontSize="12" VerticalOptions="StartAndExpand" HorizontalOptions="StartAndExpand" WidthRequest="325">
+            <Label Margin="15,0" FontSize="12" VerticalOptions="StartAndExpand" HorizontalOptions="StartAndExpand">
                 <Label.FormattedText>
                     <FormattedString>
                         <Span TextColor="{StaticResource AboutPagePrimary}" Text="• Initial Setup Costs:" FontAttributes="Bold"/>
@@ -223,7 +223,7 @@
                     </FormattedString>
                 </Label.FormattedText>
             </Label>
-            <Label Margin="25,0" FontSize="12" VerticalOptions="StartAndExpand" HorizontalOptions="StartAndExpand" WidthRequest="325">
+            <Label Margin="15,0" FontSize="12" VerticalOptions="StartAndExpand" HorizontalOptions="StartAndExpand">
                 <Label.FormattedText>
                     <FormattedString>
                         <Span TextColor="{StaticResource AboutPagePrimary}" Text="• Maintenance:" FontAttributes="Bold"/>
@@ -231,7 +231,7 @@
                     </FormattedString>
                 </Label.FormattedText>
             </Label>
-            <Label Margin="25,0" FontSize="12" VerticalOptions="StartAndExpand" HorizontalOptions="StartAndExpand" WidthRequest="325">
+            <Label Margin="15,0" FontSize="12" VerticalOptions="StartAndExpand" HorizontalOptions="StartAndExpand">
                 <Label.FormattedText>
                     <FormattedString>
                         <Span TextColor="{StaticResource AboutPagePrimary}" Text="• Power Needs:" FontAttributes="Bold"/>
